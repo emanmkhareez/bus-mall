@@ -152,7 +152,7 @@ function clickFun(event) {
     else {
 
         let btn = document.createElement('button');
-        btn.value="result";
+        btn.innerHTML="result";
         btn.style.fontSize = "30px";
         divbtn.appendChild(btn);
         
