@@ -93,6 +93,7 @@ function renderFun() {
     first.src = Bus.mall[firstIndex].shown++;
     second.src = Bus.mall[secondIndex].shown++;
     third.src = Bus.mall[thirdIndex].shown++;
+
     first.src = Bus.mall[firstIndex].source;
     second.src = Bus.mall[secondIndex].source;
     third.src = Bus.mall[thirdIndex].source;
@@ -163,7 +164,7 @@ function clickFun(event) {
           list.appendChild(liElement);
           liElement.textContent=`${Bus.mall[i].name} had  ${Bus.mall[i].vot} vote  , and was seen ${Bus.mall[i].shown++} time `;
       }
-        
+        btn.removeEventListener('click',listFun);
     }
     container.removeEventListener('click',clickFun);
 
