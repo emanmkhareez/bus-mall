@@ -95,10 +95,112 @@ function renderFun() {
     second.src = Bus.mall[secondIndex].source;
     third.src = Bus.mall[thirdIndex].source;
 
+   
+         if(Bus.mall[firstIndex].name ==='bag'|| Bus.mall[secondIndex].name ==='bag'||Bus.mall[thirdIndex].name ==='bag'){
+            Bus.mall[0].shown++;
+         }
+         else  if(Bus.mall[firstIndex].name ==='banana'|| Bus.mall[secondIndex].name ==='banana'||Bus.mall[thirdIndex].name ==='banana')
+         { Bus.mall[1].shown++;
 
+         }
+         else  if(Bus.mall[firstIndex].name ==='bathroom'|| Bus.mall[secondIndex].name ==='bathroom'||Bus.mall[thirdIndex].name ==='bathroom')
+         { Bus.mall[2].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='boots'|| Bus.mall[secondIndex].name ==='boots'||Bus.mall[thirdIndex].name ==='boots')
+         { Bus.mall[3].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='breakfast'|| Bus.mall[secondIndex].name ==='breakfast'||Bus.mall[thirdIndex].name ==='breakfast')
+         { Bus.mall[4].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='bubblegum'|| Bus.mall[secondIndex].name ==='bubblegum'||Bus.mall[thirdIndex].name ==='bubblegum')
+         { Bus.mall[5].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='chair'|| Bus.mall[secondIndex].name ==='chair'||Bus.mall[thirdIndex].name ==='chair')
+         { Bus.mall[6].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='cthulhu'|| Bus.mall[secondIndex].name ==='cthulhu'||Bus.mall[thirdIndex].name ==='cthulhu')
+         { Bus.mall[7].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='dog-duck'|| Bus.mall[secondIndex].name ==='dog-duck'||Bus.mall[thirdIndex].name ==='dog-duck')
+         { Bus.mall[8].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='dragon'|| Bus.mall[secondIndex].name ==='dragon'||Bus.mall[thirdIndex].name ==='dragon')
+         { Bus.mall[9].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='pen'|| Bus.mall[secondIndex].name ==='pen'||Bus.mall[thirdIndex].name ==='pen')
+         { Bus.mall[10].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='pet-sweep'|| Bus.mall[secondIndex].name ==='pet-sweep'||Bus.mall[thirdIndex].name ==='pet-sweep')
+         { Bus.mall[11].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='scissors'|| Bus.mall[secondIndex].name ==='scissors'||Bus.mall[thirdIndex].name ==='scissors')
+         { Bus.mall[12].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='shark'|| Bus.mall[secondIndex].name ==='shark'||Bus.mall[thirdIndex].name ==='shark')
+         { Bus.mall[13].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='sweep'|| Bus.mall[secondIndex].name ==='sweep'||Bus.mall[thirdIndex].name ==='sweep')
+         { Bus.mall[14].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='tauntaun'|| Bus.mall[secondIndex].name ==='tauntaun'||Bus.mall[thirdIndex].name ==='tauntaun')
+         { Bus.mall[15].shown++;
+
+         }
+
+         else  if(Bus.mall[firstIndex].name ==='unicorn'|| Bus.mall[secondIndex].name ==='unicorn'||Bus.mall[thirdIndex].name ==='unicorn')
+         { Bus.mall[16].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='usb'|| Bus.mall[secondIndex].name ==='usb'||Bus.mall[thirdIndex].name ==='usb')
+         { Bus.mall[17].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='water'|| Bus.mall[secondIndex].name ==='water'||Bus.mall[thirdIndex].name ==='water')
+         { Bus.mall[18].shown++;
+
+         }
+         else  if(Bus.mall[firstIndex].name ==='wine-glass'|| Bus.mall[secondIndex].name ==='wine-glass'||Bus.mall[thirdIndex].name ==='wine-glass')
+         { Bus.mall[19].shown++;
+
+         }
+
+
+
+
+
+
+
+     
   
 
-}
+
+for(let i=0 ;i<10;i++){
+switch(Bus.mall[i].name){
+    case 'bag':
+        Bus.shown++;
+        break;
+case 'banana':
+    Bus.shown++;
+    break;
+
+
+}}
+
+    }
+
  renderFun();
 
 //add event to div
@@ -149,7 +251,7 @@ function clickFun(event) {
       for(let i=0;i<Bus.mall.length;i++){
           let liElement=document.createElement('li');
           list.appendChild(liElement);
-          liElement.textContent=`${Bus.mall[i].name} had  ${Bus.mall[i].vot} vote  , and was seen ${Bus.mall[i].show} time `;
+          liElement.textContent=`${Bus.mall[i].name} had  ${Bus.mall[i].vot} vote  , and was seen ${Bus.mall[i].shown++} time `;
       }
         
     }
