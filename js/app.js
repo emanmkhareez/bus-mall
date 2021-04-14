@@ -175,6 +175,7 @@ function clickFun(event) {
 
         if (event.target.id === 'first') {
             Bus.mall[firstIndex].vot++;
+          
 
         }
         else if (event.target.id == 'second') {
@@ -187,11 +188,18 @@ function clickFun(event) {
             Bus.mall[thirdIndex].vot++;
 
         }
+        
         console.log(Bus.mall);
 
         renderFun();
+        setStorge();
+       
+      
     }
 
+     
+  
+      
 //show the result after click on btn after finsh attempts 
     else {
 
@@ -208,23 +216,70 @@ function clickFun(event) {
           list.appendChild(liElement);
           liElement.textContent=`${Bus.mall[i].name} had  ${Bus.mall[i].vot} vote  , and was seen ${Bus.mall[i].shown++} time `;
       }
+       
         btn.removeEventListener('click',listFun);
     }
     container.removeEventListener('click',clickFun);
 
-
+   
     for (let i = 0; i < Bus.mall.length; i++) {
         votesArr.push(Bus.mall[i].vot);
         shownArr.push(Bus.mall[i].shown);
+       
+        
         
       }
+
+      
+
+       
       chart();
+
+
+    
 
     }
 
 
     
+
 }
+//function to convert obj to string array and stord that inside app 
+
+function setStorge(){
+  
+  //to convert obj to string 
+ let arrayMall=JSON.stringify(Bus.mall);
+ 
+
+  //to store array inside app
+  
+  localStorage.setItem('mallObj',arrayMall);
+  console.log(arrayMall);
+ 
+}
+//function to convert array to obj and retrive from app
+function getStorge(){
+  // get the data from the local storage
+  let objData=localStorage.getItem('mallObj');
+console.log(objData);
+//convert objData to array of obj
+let arrayObj=JSON.parse(objData);
+
+console.log(arrayObj);
+if(arrayObj){
+  Bus.mall=arrayObj;
+
+}
+renderFun();
+
+
+}
+
+
+
+
+
 //chart fun to show shown and vote to each img
 
 function chart() {
@@ -276,3 +331,4 @@ function chart() {
 
    
 
+getStorge();
